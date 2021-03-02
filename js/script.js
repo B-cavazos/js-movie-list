@@ -16,7 +16,7 @@ let movies = [
     description: 'An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.',
   },
   {
-    id. 3,
+    id: 3,
     title: 'Akira',
     year: '1988',
     genre: 'Animation, Action, Sci-Fi',
@@ -41,5 +41,23 @@ let movies = [
 },
 ];
 
+alert(movies[0]);
 
 
+movies.push({
+    id: 6,
+    title: 'Constantine',
+    year: '2005',
+    genre: 'Action, Fantasy, Horror',
+    imdb: 7.0,
+    description: "Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more.",
+},
+{
+    id: 7,
+    title: 'Sommersby',
+    year: '1993',
+    genre: 'Drama, Mystery, Romance',
+    imdb: 6.2,
+    description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.',
+},);
+console.log(movies);
