@@ -9,11 +9,7 @@ let movies = [
     image:'https://i.ibb.co/bsg4cDx/gladiator.jpg',
         },
   {
-<<<<<<< HEAD
     id: 2
-=======
-    id: 2,
->>>>>>> e7dc70130d6c8d6a454af69752de6824db374c93
     title: 'John Wick',
     year: '2014',
     genre: 'Action, Crime, Thriller',
@@ -22,11 +18,7 @@ let movies = [
     image:'https://i.ibb.co/qYxBy2J/John-Wick.jpg',
   },
   {
-<<<<<<< HEAD
     id: 3,
-=======
-    id. 3,
->>>>>>> e7dc70130d6c8d6a454af69752de6824db374c93
     title: 'Akira',
     year: '1988',
     genre: 'Animation, Action, Sci-Fi',
@@ -35,11 +27,7 @@ let movies = [
     image:'https://i.ibb.co/dpJ2Yfc/Akira.jpg',
   },
   {
-<<<<<<< HEAD
-    1d: 4,
-=======
     id: 4,
->>>>>>> e7dc70130d6c8d6a454af69752de6824db374c93
     title: 'Midsommar',
     year: '2019',
     genre: 'Drama, Horror, Mystery',
