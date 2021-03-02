@@ -49,6 +49,28 @@ let movies = [
 
 
 
+function myFunction() {
+  alert('Title: ' + movies[0].title + '     Description: ' + movies[0].description);
+}
+
+function myFunction2() {
+  alert('Title: ' + movies[1].title + '     Description: ' + movies[1].description);
+}
+
+function myFunction3() {
+  alert('Title: ' + movies[2].title + '     Description: ' + movies[2].description);
+}
+
+function myFunction4() {
+  alert('Title: ' + movies[3].title + '     Description: ' + movies[3].description);
+}
+
+function myFunction5() {
+  alert('Title: ' + movies[4].title + '     Description: ' + movies[4].description);
+}
+
+
+
 movies.push({
     id: 6,
     title: 'Constantine',
