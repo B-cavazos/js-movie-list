@@ -88,3 +88,14 @@ movies.push({
     description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.',
 },);
 console.log(movies);
+
+
+const removeMovie = (removedTitle) =>{
+  //filter array by movie title
+    removedTitle = movies.filter((film) => {
+  //return object if the parameter is not true
+      return film.title !== removedTitle; //  !== true was in correct, returned all items in array
+  });
+    console.log(removedTitle);
+  }
+  removeMovie('Akira');  
