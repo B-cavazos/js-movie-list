@@ -1,3 +1,4 @@
+//define array of objects
 let movies = [
     {
     id: 1,
@@ -37,7 +38,7 @@ let movies = [
   },
   {
     id: 5,
-    title: 'Gtrave of the Fireflies',
+    title: 'Grave of the Fireflies',
     year: '1988',
     genre: 'Animation, Drama, War',
     imdb: 8.5,
@@ -48,54 +49,66 @@ let movies = [
 
 
 
+//button function - display title and description on click
+//find a movie based on a paramerter (going with title)
+const alertMovieDetails = movieTitle =>{
+  //set a variable inside of the function
+  let foundMovie = movies.find(movie =>{
+    return movie.title === movieTitle;
+  });
+  console.log(foundMovie);
+  alert(`${foundMovie.title}: ${foundMovie.description}`);
+};
 
-function myFunction() {
-  alert('Title: ' + movies[0].title + '     Description: ' + movies[0].description);
-}
+// 
 
-function myFunction2() {
-  alert('Title: ' + movies[1].title + '     Description: ' + movies[1].description);
-}
+//Function to add object to array
+// movies.push({
+//     id: 6,
+//     title: 'Constantine',
+//     year: '2005',
+//     genre: 'Action, Fantasy, Horror',
+//     imdb: 7.0,
+//     description: "Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more.",
+// },
+// {
+//     id: 7,
+//     title: 'Sommersby',
+//     year: '1993',
+//     genre: 'Drama, Mystery, Romance',
+//     imdb: 6.2,
+//     description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.',
+// },);
+// console.log(movies);
 
-function myFunction3() {
-  alert('Title: ' + movies[2].title + '     Description: ' + movies[2].description);
-}
+//V.2.0 - follow along
+const addNewMovie = (movieId, movieTitle, movieDes, movieYear, movieGenre, movieImdbRating) =>{
+  //create new movie object //
+  let newMovie ={
+    id: movieId,
+    title: movieTitle,
+    description: movieDes,
+    Year: movieYear,
+    genre: movieGenre,
+    imdbRating: movieImdbRating, // if param name is same as KEY name, you don't have to do key:value structure here
+  };
+  console.log(newMovie)
+  // Push our object ot the array
+  movies.push(movies);
+  console.log(movies);
+};
 
-function myFunction4() {
-  alert('Title: ' + movies[3].title + '     Description: ' + movies[3].description);
-}
-
-function myFunction5() {
-  alert('Title: ' + movies[4].title + '     Description: ' + movies[4].description);
-}
-
-
-
-movies.push({
-    id: 6,
-    title: 'Constantine',
-    year: '2005',
-    genre: 'Action, Fantasy, Horror',
-    imdb: 7.0,
-    description: "Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more.",
-},
-{
-    id: 7,
-    title: 'Sommersby',
-    year: '1993',
-    genre: 'Drama, Mystery, Romance',
-    imdb: 6.2,
-    description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.',
-},);
-console.log(movies);
+addNewMovie(6, 'elf', 'funny', 2002, 'comedy', 8.0); //values can just go here - in ref to last comment
 
 
-const removeMovie = (removedTitle) =>{
+
+//function to remove object from array by title
+const removeMovie = (removedTitle) =>{ 
   //filter array by movie title
-    removedTitle = movies.filter((film) => {
+    removedTitle = movies.filter((film) => { // this variable shouldnt match paramater. doing this reasigns param to movie.filter 
   //return object if the parameter is not true
       return film.title !== removedTitle; //  !== true was in correct, returned all items in array
   });
     console.log(removedTitle);
   }
-  removeMovie('Akira');  
+  removeMovie('Akira');
