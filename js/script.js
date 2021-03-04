@@ -47,18 +47,31 @@ let movies = [
     },
 ];
 
+/** Function to display Movie Title and Description */
+
+const myFunction = movieTitle => {
+  //   debugger;
+  let foundMovie = movies.find(movie => {
+    return movie.title === movieTitle;
+  });
+  if (foundMovie) {
+    alert(`${foundMovie.title}: ${foundMovie.description}`);
+  } else {
+    alert('The Movie was not found :(');
+  }
+};
 
 
 //button function - display title and description on click
 //find a movie based on a paramerter (going with title)
-const alertMovieDetails = movieTitle =>{
-  //set a variable inside of the function
-  let foundMovie = movies.find(movie =>{
-    return movie.title === movieTitle;
-  });
-  console.log(foundMovie);
-  alert(`${foundMovie.title}: ${foundMovie.description}`);
-};
+// const alertMovieDetails = movieTitle =>{
+//   //set a variable inside of the function
+//   let foundMovie = movies.find(movie =>{
+//     return movie.title === movieTitle;
+//   });
+//   console.log(foundMovie);
+//   alert(`${foundMovie.title}: ${foundMovie.description}`);
+// };
 
 // 
 

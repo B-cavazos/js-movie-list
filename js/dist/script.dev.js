@@ -1,5 +1,6 @@
 "use strict";
 
+//define array of objects
 var movies = [{
   id: 1,
   title: 'Gladiator',
@@ -34,47 +35,86 @@ var movies = [{
   image: 'https://i.ibb.co/86VFvVr/Midsommar.jpg'
 }, {
   id: 5,
-  title: 'Gtrave of the Fireflies',
+  title: 'Grave of the Fireflies',
   year: '1988',
   genre: 'Animation, Drama, War',
   imdb: 8.5,
   description: 'A young boy and his little sister struggle to survive in Japan during World War II.',
   image: 'https://i.ibb.co/2KP4Px5/Grave-of-the-Fireflies.jpg'
 }];
+/** Function to display Movie Title and Description */
 
-function myFunction() {
-  alert('Title: ' + movies[0].title + '     Description: ' + movies[0].description);
-}
+var myFunction = function myFunction(movieTitle) {
+  //   debugger;
+  var foundMovie = movies.find(function (movie) {
+    return movie.title === movieTitle;
+  });
 
-function myFunction2() {
-  alert('Title: ' + movies[1].title + '     Description: ' + movies[1].description);
-}
+  if (foundMovie) {
+    alert("".concat(foundMovie.title, ": ").concat(foundMovie.description));
+  } else {
+    alert('The Movie was not found :(');
+  }
+}; //button function - display title and description on click
+//find a movie based on a paramerter (going with title)
+// const alertMovieDetails = movieTitle =>{
+//   //set a variable inside of the function
+//   let foundMovie = movies.find(movie =>{
+//     return movie.title === movieTitle;
+//   });
+//   console.log(foundMovie);
+//   alert(`${foundMovie.title}: ${foundMovie.description}`);
+// };
+// 
+//Function to add object to array
+// movies.push({
+//     id: 6,
+//     title: 'Constantine',
+//     year: '2005',
+//     genre: 'Action, Fantasy, Horror',
+//     imdb: 7.0,
+//     description: "Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more.",
+// },
+// {
+//     id: 7,
+//     title: 'Sommersby',
+//     year: '1993',
+//     genre: 'Drama, Mystery, Romance',
+//     imdb: 6.2,
+//     description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.',
+// },);
+// console.log(movies);
+//V.2.0 - follow along
 
-function myFunction3() {
-  alert('Title: ' + movies[2].title + '     Description: ' + movies[2].description);
-}
 
-function myFunction4() {
-  alert('Title: ' + movies[3].title + '     Description: ' + movies[3].description);
-}
+var addNewMovie = function addNewMovie(movieId, movieTitle, movieDes, movieYear, movieGenre, movieImdbRating) {
+  //create new movie object //
+  var newMovie = {
+    id: movieId,
+    title: movieTitle,
+    description: movieDes,
+    Year: movieYear,
+    genre: movieGenre,
+    imdbRating: movieImdbRating // if param name is same as KEY name, you don't have to do key:value structure here
 
-function myFunction5() {
-  alert('Title: ' + movies[4].title + '     Description: ' + movies[4].description);
-}
+  };
+  console.log(newMovie); // Push our object ot the array
 
-movies.push({
-  id: 6,
-  title: 'Constantine',
-  year: '2005',
-  genre: 'Action, Fantasy, Horror',
-  imdb: 7.0,
-  description: "Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more."
-}, {
-  id: 7,
-  title: 'Sommersby',
-  year: '1993',
-  genre: 'Drama, Mystery, Romance',
-  imdb: 6.2,
-  description: 'A farmer returns home from the Civil War, but his wife begins to suspect that the man is an impostor.'
-});
-console.log(movies);
+  movies.push(movies);
+  console.log(movies);
+};
+
+addNewMovie(6, 'elf', 'funny', 2002, 'comedy', 8.0); //values can just go here - in ref to last comment
+//function to remove object from array by title
+
+var removeMovie = function removeMovie(removedTitle) {
+  //filter array by movie title
+  removedTitle = movies.filter(function (film) {
+    // this variable shouldnt match paramater. doing this reasigns param to movie.filter 
+    //return object if the parameter is not true
+    return film.title !== removedTitle; //  !== true was in correct, returned all items in array
+  });
+  console.log(removedTitle);
+};
+
+removeMovie('Akira');

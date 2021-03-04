@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript Projects</title>
+    <title>Movie List</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,57 +13,69 @@
 
 <div class="container my-5">
 
-  <h1 style="color: white; text-align: center; font-family: fantasy; font-size: 800%; border: 2px solid white;">Movie List</h1>
 
-  <div class="row">
 
-    <div class="col text-center my-5" id="gladiator">
-      <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/bsg4cDx/gladiator.jpg">
-      </div>
-
-        <h1 style="color: white;">Year: 2000</h1>
-        <h2 style="color: white;">Genre: Historical Drama</h2>
-          <h3 style="color: white;">IMBD: 8.5</h3>
-        <button class="btn btn-primary" onclick="alertMovieDetails('Gladiator')">Title and Description</button>
-    </div>
-
-    <div class="row">
-      <div class="col text-center my-5">
-        <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/qYxBy2J/John-Wick.jpg">
-        </div>
-
-        <h1 style="color: white;">Year: 2014</h1>
-        <h2 style="color: white;">Genre: Action, Crime, Thriller</h2>
-          <h3 style="color: white;">IMBD: 7.4</h3>
-          <button class="btn btn-primary" onclick="alertMovieDetails('John Wick')">Title and Description</button>
-      </div>
-
-  </div>
+  <h1 style="color: white; text-align: center; font-family: fantasy; font-size: 800%; border: 2px solid white; background-image: url('https://i.ibb.co/XbVy9z5/hbz-classic-movies-00-index-new-1591823486.jpg'); background-size: cover; text-shadow: -2px -2px black;">Movie List</h1>
 
   <div class="row">
 
     <div class="col text-center my-5">
-      <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/dpJ2Yfc/Akira.jpg">
+
+      <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/bsg4cDx/gladiator.jpg">
       </div>
 
-      <h1 style="color: white;">Year: 1988</h1>
-      <h2 style="color: white;">Genre: Animation, Action, Sci-fi</h2>
-        <h3 style="color: white;">IMBD: 8.0</h3>
-        <button class="btn btn-primary" onclick="alertMovieDetails('Akira')">Title and Description</button>
+        <h1 style="color: white;">Gladiator</h1>
+        <h2 style="color: white; font-size: small;">2000 | Historical Drama | IMBD 8.5</h2>
+
+        <button class="btn btn-primary" onclick="myFunction('Gladiator')" id="1">Description</button>
     </div>
 
-    <div class="row">
+
+
       <div class="col text-center my-5">
-        <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/86VFvVr/Midsommar.jpg">
+
+        <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/qYxBy2J/John-Wick.jpg">
         </div>
 
-        <h1 style="color: white;">Year: 2019</h1>
-        <h2 style="color: white;">Genre: Drama, Horror, Mystery</h2>
-          <h3 style="color: white;">IMBD: 7.1</h3>
-          <button class="btn btn-primary" onclick="alertMovieDetails('Midsommar')">Title and Description</button>
+        <h1 style="color: white;">John Wick</h1>
+        <h2 style="color: white; font-size: small;">2014 | Action, Crime, Thriller | IMBD 7.4</h2>
+
+          <button class="btn btn-primary" onclick="myFunction('John Wick')" id="2">Description</button>
       </div>
 
   </div>
+
+  <hr style="background-color: white;">
+
+  <div class="row">
+
+    <div class="col text-center my-5">
+
+      <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/dpJ2Yfc/Akira.jpg">
+      </div>
+
+      <h1 style="color: white;">Akira</h1>
+      <h2 style="color: white; font-size: small;">1988 | Animation, Action, Sci-fi | IMBD 8.0</h2>
+
+        <button class="btn btn-primary" onclick="myFunction('Akira')" id="3">Description</button>
+    </div>
+
+
+
+      <div class="col text-center my-5">
+
+        <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/86VFvVr/Midsommar.jpg">
+        </div>
+
+        <h1 style="color: white;">Midsommar</h1>
+        <h2 style="color: white; font-size: small;">2019 | Drama, Horror, Mystery | IMBD 7.1</h2>
+
+          <button class="btn btn-primary" onclick="myFunction('Midsommar')" id="4">Description</button>
+      </div>
+
+  </div>
+
+  <hr style="background-color: white;">
 
   <div class="row">
 
@@ -71,16 +83,23 @@
       <div><img style="height: 200px; margin: 10%;" src="https://i.ibb.co/2KP4Px5/Grave-of-the-Fireflies.jpg">
       </div>
 
-      <h1 style="color: white;">Year: 1988</h1>
-      <h2 style="color: white;">Genre: Animation, Drama, War</h2>
-        <h3 style="color: white;">IMBD: 8.5</h3>
-        <button class="btn btn-primary" onclick="alertMovieDetails('Grave of the Fireflies')">Title and Description</button>
+      <h1 style="color: white;">Grave of the Fireflies</h1>
+      <h2 style="color: white; font-size: small;">1988 | Animation, Drama, War | Imbd 8.5</h2>
+
+        <button class="btn btn-primary" onclick="myFunction('Grave of the Fireflies')" id="5">Description</button>
     </div>
 
   </div>
 
-</div>
 
+
+<hr style="background-color: white;">
+
+<footer>
+<h2 class="text text-center">Created by: Brittney Cavazos & Ludwin Granados</h2>
+</footer>
+
+</div>
     <div class="container"></div>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
